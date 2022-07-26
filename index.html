@@ -1,60 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phonie</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phonie</title>
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Team: Circle-238</h1>
-        <h1>Project: Phonie</h1>
+  <nav class="navbar">
+    <h2>PHONIE</h2>
+    <button>About Us</button>
+  </nav>
 
-        <h3>Description: </h3>
-    </header>
 
-    
-    <main class="card">
-        <ul class="carriers">
-            <li class="carrier"><img src="./images/logos/airtel.png"></li>
-            <li class="carrier"><img src="./images/logos/mtn.png"></li>
-            <li class="carrier"><img src="./images/logos/glo.png"></li>
-            <li class="carrier"><img src="./images/logos/9mobile.png"></li>
-        </ul>
-      <!-- Form input start    -->
-    <form id = "form">
+  <main class="card">
+    <ul class="carriers">
+      <li class="carrier" id="carrier--airtel"><img src="./images/logos/airtel.png"></li>
+      <li class="carrier" id="carrier--mtn"><img src="./images/logos/mtn.png"></li>
+      <li class="carrier" id="carrier--glo"><img src="./images/logos/glo.png"></li>
+      <li class="carrier" id="carrier--9mobile"><img src="./images/logos/9mobile.png"></li>
+    </ul>
+    <!-- Form input start    -->
+    <form id="form">
       <div id="tel-wrapper">
-          <div id="tel-logo"><img src="images/logos/9mobile.png"></div>
-          <input type = "tel"
-      class = "tel" placeholder="Enter your phone number" required/>
+        <div id="tel-logo"><img src="images/logos/9mobile.png"></div>
+          <div>
+              <input type="tel" class="tel" placeholder="Enter your phone number" required />
+              <div id="suggestions-wrapper">
+                  <ul id="suggestions">
+                      
+                  </ul>
+              </div>
+          </div>
+        
       </div>
       <button class="validate-btn">VALIDATE</button>
-      </form>
-      <!-- Form input end  -->
-    </main>
-<!--   footer start-->
+    </form>
+    <!-- Form input end  -->
+  </main>
+  <!--   footer start-->
   <footer>
     <h2>Authors:</h2>
-    <a href = "https://twitter.com/ ">Josiah Augustine</a>
-      <a href = "https://twitter.com/ ">Boluwatife Farinu</a>
-      <a href = "https://twitter.com/ ">Ablaku Jeffrey Kagbu</a>
-      <a href = "https://twitter.com/ ">Fatima Olofu</a>
-      <a href = "https://twitter.com/ ">Hassan Yakub</a>
-      <a href = "https://twitter.com/drvnprgrmr ">Ibukun Ekunwe</a>
-      <a href = "https://twitter.com/ ">Kalejaye Oluwafunmilayo</a>
-      <a href = "https://twitter.com/KamalMu63078285">Kamal Mustapha</a>
-      <a href = "https://twitter.com/ ">Omowole Gbenga</a>
-      <a href = "https://twitter.com/ ">Samuel Oluwarotimi</a>
-    
+    <a href="https://twitter.com/ ">Josiah Augustine</a>
+    <a href="https://twitter.com/ ">Boluwatife Farinu</a>
+    <a href="https://twitter.com/ ">Ablaku Jeffrey Kagbu</a>
+    <a href="https://twitter.com/ ">Fatima Olofu</a>
+    <a href="https://twitter.com/ ">Hassan Yakub</a>
+    <a href="https://twitter.com/drvnprgrmr ">Ibukun Ekunwe</a>
+    <a href="https://twitter.com/ ">Kalejaye Oluwafunmilayo</a>
+    <a href="https://twitter.com/KamalMu63078285">Kamal Mustapha</a>
+    <a href="https://twitter.com/ ">Omowole Gbenga</a>
+    <a href="https://twitter.com/ ">Samuel Oluwarotimi</a>
+
   </footer>
-<!--   footer end-->
-  
-  
-    <!-- // ============= EEND DO NOT EDIT ============== // -->
-    <script src="index.mjs" type="module"></script>
-    <!-- // ============= EEND DO NOT EDIT ============== // -->
+  <!--   footer end-->
+
+
+  <!-- // ============= EEND DO NOT EDIT ============== // -->
+  <script src="index.mjs" type="module"></script>
+  <!-- // ============= EEND DO NOT EDIT ============== // -->
 </body>
+
 </html>
