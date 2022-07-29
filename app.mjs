@@ -53,6 +53,7 @@ function startApp() {
     let carriers = document.getElementsByClassName("carrier")
 
     phoneInp.addEventListener("input", handleLogo)
+    
 
 
     function handleLogo(e) {
@@ -63,13 +64,19 @@ function startApp() {
             carrier.style.opacity = 0.5
         }
 
-        if (el.value.length === 11) {
+        telLogo.replaceChildren()
+
+        if (el.value.length >= 4) {
             Object.entries(carrierPrefixes).forEach(([key, value]) => {
                 if (el.value.startsWith(key)) {
                     let logo = document.getElementById(`carrier--${value}`)
 
                     // Highlight the right logo
                     logo.style.opacity = 1
+
+                    const img = document.createElement("img")
+                    img.src = `images/logos/${value}.png`
+                    telLogo.appendChild(img)
 
                     return
                 }
@@ -91,10 +98,9 @@ function startApp() {
 
         // Grab the value of input
         const el = e.currentTarget;
-        const curVal = el.value.replaceAll(" ", "")
 
         // compare with list of values and filter
-        const filteredList = suggestionList.filter((x) => { return x.startsWith(curVal) })
+        const filteredList = suggestionList.filter((x) => { return x.startsWith(el.value) })
 
         // display list of values in alphabetical order
         filteredList.forEach((x) => {
@@ -115,7 +121,12 @@ function startApp() {
 
         // Clear all suggestions
         suggestions.innerHTML = ""
+
+        // Put the input element back in focus
+        phoneInp.focus()
     }
+
+    
 
 };
 
