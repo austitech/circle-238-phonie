@@ -19,27 +19,25 @@
 
   <main class="card">
     <ul class="carriers">
-      <li class="carrier" id="carrier--airtel"><img src="./images/logos/airtel.png"></li>
-      <li class="carrier" id="carrier--mtn"><img src="./images/logos/mtn.png"></li>
-      <li class="carrier" id="carrier--glo"><img src="./images/logos/glo.png"></li>
-      <li class="carrier" id="carrier--9mobile"><img src="./images/logos/9mobile.png"></li>
+      <li id="carrier" id="carrier--airtel" class="airtel"><img src="./images/logos/airtel.png"></li>
+      <li id="carrier" id="carrier--mtn" class="mtn"><img src="./images/logos/mtn.png"></li>
+      <li id="carrier" id="carrier--glo" class="glo"><img src="./images/logos/glo.png"></li>
+      <li id="carrier" id="carrier--9mobile" class="mobile"><img src="./images/logos/9mobile.png"></li>
     </ul>
     <!-- Form input start    -->
-    <form id="form">
-      <div id="tel-wrapper">
-        <div id="tel-logo"></div>
-          <div>
-              <input type="tel" class="tel" placeholder="Enter your phone number" required />
-              <div id="suggestions-wrapper">
-                  <ul id="suggestions">
-                      
-                  </ul>
-              </div>
-          </div>
-        
+    <p id="suggestions"></p>
+    <div id="tel-wrapper">
+      <span class="popuptext" id="myPopup">Not mtn number, please enter a valid mtn number</span>
+      <div id="tel-logo">
+        <img src="error.png" id="tel-image" alt="carrier logo">
       </div>
-      <button class="validate-btn">VALIDATE</button>
-    </form>
+      <div id="form">
+        <form id="form">
+          <input type="tel" class="tel" id="myInput" placeholder="Enter your phone number" required />
+          <button class="validate-btn" id="validate">VALIDATE</button>
+        </form>
+      </div>
+    </div>
     <!-- Form input end  -->
   </main>
   <!--   footer start-->
@@ -61,7 +59,10 @@
 
 
   <!-- // ============= EEND DO NOT EDIT ============== // -->
-  <script src="index.mjs" type="module"></script>
+  <!--   <script src="index.mjs" type="module"></script> -->
+  <script src="autocomplete.js"></script>
+  <script src="app.js"></script>
+
   <!-- // ============= EEND DO NOT EDIT ============== // -->
 </body>
 

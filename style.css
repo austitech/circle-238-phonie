@@ -15,11 +15,16 @@ img {
 }
 
 .card {
-    background-color: aquamarine;
-    width: 60vw;
-    max-width: 60rem;
-    margin: 0 auto;
-    margin-top: 10rem;
+  margin-top: 50px;
+    position: relative;
+    background-color: #e3ff80;
+    width: 80vw;
+/*     max-width: 60rem; */
+/*     margin: 0 auto;
+    margin-top: 10rem; */
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
     padding: 3rem;
     border-radius: 1rem;
 }
@@ -28,52 +33,73 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
     list-style-type: none;
     padding: 0;
     margin-bottom: 3rem;
 }
 
-.carrier {
+#carrier {
     width: 3.2rem;
-    height: 3.2rem;
+    height: 2.2rem;
     padding: .2rem;
-    opacity: .5
+    /*opacity: 0;*/
 }
-
+.airtel,.mtn,.glo,.mobile {
+  opacity: 0.2;
+}
+.active {
+  opacity: 1;
+}
 input[type=tel] {
+  
+/*   width: 80%; */
     /* margin: 0 auto; */
-    height: 2rem;
+/*     height: 2rem;
     width: 15rem;
     border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0; */
 }
 
 #tel-wrapper {
+  position: relative;
     display: flex;
     justify-content: center;
-    padding: 0 auto;
+  width: 100%;
+/*   padding: 0 20px; */
+/*     padding: 0 auto; */
 }
 
 #tel-logo {
-    width: 2.3rem;
-    height: 2rem;
+/*   position: absolute; */
+/*   left: 10px; */
+    width: 3rem;
+  border: 2px solid black;
+    height: 3rem;
 }
 
 #tel-logo img {
-    border-top-left-radius: .2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: block;
+  margin: auto;
+
+
+
+
+/*     border-top-left-radius: .2rem;
     border-bottom-left-radius: .2rem;
-    border-right: 1.5px solid black;
+    border-right: 1.5px solid black; */
 }
 
 
 
 #suggestions-wrapper {
-    position: relative;
+/*     position: relative; */
 }
 
-#suggestions {
-    position: absolute;
+#myPopup {
+  display: none;
+/*     position: absolute;
     
     width: 100%;
     max-height: 10rem;
@@ -82,56 +108,62 @@ input[type=tel] {
     padding: 0;
     list-style: none;
 
-    background-color: white;
+    background-color: white; */
 }
 
 #suggestions li {
-    padding: .5rem;
+/*     padding: .5rem;
     border-bottom: 1px solid black;
 
-    cursor: pointer;
+    cursor: pointer; */
 }
 
 #suggestions li:hover {
-    background-color: rgb(193, 231, 219);
+/*     background-color: rgb(193, 231, 219); */
     
 }
 
 
 /* form style start */
 #form{
+/*   position: absolute; */
   display: flex;
-  justify-content: center;
+/*   justify-content: center; */
+/*   left: 20%; */
 }
 
 .tel{
-  width: 60%;
+  width: 35vw;
   margin-right: 5px;
   border-radius: 5px;
-  border: none;
-  padding: 5px;
+  border: 2px solid yellow;
+  background: none;
+  height: 3rem;
+/*   padding: 5px; */
   font-family: Arial, Helvetica, sans-serif;
   transition: all 0.2s ease-out;
 }
 
 .validate-btn{
 /*   width: 10%; */
-  background: #9b5f5f;
+  background: none;
   color: white;
   border-radius: 5px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  padding: 3px;
-  border: none;
+  padding: 5px;
+  border: 2px solid #caca02;
   transition: all 0.2s ease-out;
 
 }
 .tel:hover{
   border: solid #d2c6c6;
 }
-
+.tel:focus {
+  outline: none;
+}
 .validate-btn:hover{
-  border: solid #d2c6c6;
+  background: #ff0;
 }
 
 /* form style end */
@@ -188,6 +220,27 @@ footer > h2 {
   background-color: black;
   color: white;
   transition: .4s;
+}
+
+.autocomplete-items {
+    position: absolute;
+    padding-top: 1px;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    width: 40%;
+  margin-top: 3rem;
+    font-size: 20px;
+}
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+    background-color: #e9e9e9;
 }
 
 /* footer style end */
